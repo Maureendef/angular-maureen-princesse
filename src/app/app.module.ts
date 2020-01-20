@@ -7,6 +7,7 @@ import { PrincessListComponent } from "./princess-list/princess-list.component";
 import { PrincessDetailsComponent } from "./princess-details/princess-details.component";
 import { PrincessScriptComponent } from "./princess-script/princess-script.component";
 import { FourOFourComponent } from "./four-o-four/four-o-four.component";
+import { PrincessService } from './princess.service';
 
 @NgModule({
   imports: [
@@ -25,6 +26,7 @@ import { FourOFourComponent } from "./four-o-four/four-o-four.component";
     PrincessScriptComponent,
     FourOFourComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [PrincessService]
 })
 export class AppModule {}

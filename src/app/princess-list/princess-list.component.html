@@ -1,5 +1,7 @@
-<div *ngFor="let princess of princesses; index as princessId">
-	<app-princess-details [princess]="princess" [princessId]="princessId" (like)="like(princessId)">
-	</app-princess-details>
+<button (click)="addPrincess()">Ajouter une Princesse</button>
 
-</div>
+	<div *ngFor="let princess of princesses; index as princessId">
+		<app-princess-details [princess]="princess" [princessId]="princessId" (like)="like(princessId)">
+		</app-princess-details>
+
+	</div>

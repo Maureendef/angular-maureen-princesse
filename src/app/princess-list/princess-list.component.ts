@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { princessList } from "../princesses";
+import { PrincessService} from "../princess.service"
 
 @Component({
   selector: 'app-princess-list',
@@ -8,7 +9,7 @@ import { princessList } from "../princesses";
 })
 export class PrincessListComponent  implements OnInit{
   princesses = princessList 
-  constructor() { }
+  constructor( private princessService: PrincessService) { }
 
   ngOnInit() {
   }
@@ -16,5 +17,7 @@ export class PrincessListComponent  implements OnInit{
     this.princesses[princessId].likes++;
     //alert('Princesse likée' + princessId);
   }
-
+  addPrincess() {
+    this.princesses.push({ name: 'Philippe', year:2019, imageUrl:'', likes:0, script: 'C\'est rigolo'});  
+  }
 }
