@@ -14,7 +14,7 @@ princesses = princessList;
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      this.princess = this.princess[+params.get('princessId')];
+      this.princess = this.princesses[+params.get("princessId")];
     })
   }
 
