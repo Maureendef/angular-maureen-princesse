@@ -8,7 +8,7 @@ import { PrincessService} from "../princess.service"
   styleUrls: ['./princess-list.component.css']
 })
 export class PrincessListComponent  implements OnInit{
-  princesses = princessList 
+  princesses = this.princessService.princessList; 
   constructor( private princessService: PrincessService) { }
 
   ngOnInit() {
@@ -18,6 +18,6 @@ export class PrincessListComponent  implements OnInit{
     //alert('Princesse likée' + princessId);
   }
   addPrincess() {
-    this.princesses.push({ name: 'Philippe', year:2019, imageUrl:'', likes:0, script: 'C\'est rigolo'});  
+    this.princesses.push({ name: 'Philippe', year:2019, imageUrl:'https://cdn.discordapp.com/attachments/549980975019589637/669093742090780712/Snapchat-1834002186.jpg', likes:0, script: 'C\'est rigolo'});  
   }
 }
